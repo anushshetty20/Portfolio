@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    /* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #f4f4f4;
+    background: #1a1a2e;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #16213e;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-menu a.active {
+    color: #e94560;
+}
+
+/* Hover effect on navbar links */
+.nav-menu a:hover {
+    color: #e94560;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, #0f3460, #1a1a2e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.hero-content {
+    width: 1000px;
+    height: 90vh;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #e94560;
+}
+
+p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e94560;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #f3727a;
+}
+
+.btn-alt {
+    background: #16213e;
+    color: #e94560;
+    margin-left: 10px;
+    border: 2px solid #e94560;
+}
+
+.btn-alt:hover {
+    background: #e94560;
+    color: #fff;
+}
+
+/* Resume Page Layout */
+.resume-page {
+    padding: 3rem;
+}
+
+.resume-section {
+    background-color: #16213e;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.resume-section h2 {
+    margin-bottom: 1rem;
+    color: #e94560;
+}
+
+.resume-section ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.resume-section ul li {
+    padding: 10px 0;
+}
+
+.accordion-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background:rgb(125, 155, 224);
+    color: white;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accordion-btn:hover {
+    background:rgb(246, 94, 94);
+}
+
+.accordion-content {
+    padding: 10px;
+    display: none;
+    background-color: #1a1a2e;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #16213e;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </div>
+    
+    <div class="resume-page">
+        <div class="resume-section">
+            <div class="accordion-btn" onclick="toggleAccordion('summary')">
+                <span>Professional Summary</span>
+                <span>+</span>
+            </div>
+            <div id="summary" class="accordion-content">
+                <p style="font-size:17px">Dedicated Computer Science and Engineering student with a strong passion for programming, logical thinking, and problem-solving. Quick to learn and adapt, with hands-on experience in developing software solutions and applications through internships. Deeply interested in the computer science field and eager to begin a career as a software engineer, ready to tackle challenging development roles.</p>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <div class="accordion-btn" onclick="toggleAccordion('education')">
+                <span>Education</span>
+                <span>+</span>
+            </div>
+            <div id="education" class="accordion-content">
+                <ul>
+                    <li>B.E. in Computer Science & Engineering, Mangalore Institute of Technology & Engineering (CGPA: 9.00)</li>
+                    <br>
+                    <li>Senior Secondary (12th), SMC moodbidri (95.2%)</li><br>
+                    <li>Secondary School (SSLC), Govt Primary School arambody (93.92%)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <div class="accordion-btn" onclick="toggleAccordion('skills')">
+                <span>Skills</span>
+                <span>+</span>
+            </div>
+            <div id="skills" class="accordion-content">
+                <ul>
+                    <li><h4 style="font-weight:bold; display:inline;">Programming Languages:</h4> &nbsp; Python, Java</li>
+                    <li><h4 style="font-weight:bold; display:inline;">Web Technologies:</h4> &nbsp; HTML, CSS, JavaScript </li>
+                    <li><h4 style="font-weight:bold; display:inline;">Database:</h4> &nbsp; Sql </li>
+                    <li><h4 style="font-weight:bold; display:inline;">Frameworks:</h4> &nbsp; Flask</li>
+                    <li><h4 style="font-weight:bold; display:inline;">Tools:</h4> &nbsp; MySQL, Git, GitHub, Visual Studio Code, Postman </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <div class="accordion-btn" onclick="toggleAccordion('internships')">
+                <span>Internships</span>
+                <span>+</span>
+            </div>
+            <div id="internships" class="accordion-content">
+                <ul>
+                    <li><h4 style="font-weight:bold; display:inline;">Innobyte Java Internship</h4></li>
+                    <li>Technologies	: Java, Visual studio code, Github <br>During this internship, I gained hands-on experience with Java, enhanced problem-solving skills, and developed proficiency in Google Cloud technologies like Visual studio Code and Github. Guided by industry experts.</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <div class="accordion-btn" onclick="toggleAccordion('projects')">
+                <span>Projects</span>
+                <span>+</span>
+            </div>
+            <div id="projects" class="accordion-content">
+                <ul>
+                    <li><h4 style = "font-weight:bold">Pharmacy Management System | Group of 5</h4> 	
+                        Developed a Pharmacy Management System in C as part of a team, featuring menu browsing, add stock,view stock and transaction management. Leveraged data structures for menu handling, file handling for add and view stock, and I/O operations for user interactions. This project strengthened my understanding of core C programming concepts.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <div class="accordion-btn" onclick="toggleAccordion('achievements')">
+                <span>Achievements</span>
+                <span>+</span>
+            </div>
+            <div id="achievements" class="accordion-content">
+                <ul>
+                    <li>Participated in Zee Coder Coding Competition Organized by the Department of Information Science & Engineering, MITE, 2024.</li>
+                    <li>Participated in Code Relay Coding Competition Organized by the Department of Computer Science & Engineering, MITE,2024.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Anush. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleAccordion(sectionId) {
+            var content = document.getElementById(sectionId);
+            var button = content.previousElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                button.innerHTML = button.innerHTML.replace("−", "+");
+            } else {
+                content.style.display = "block";
+                button.innerHTML = button.innerHTML.replace("+", "−");
+            }
+        }
+    </script>
+</body>
+</html>

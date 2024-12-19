@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anush's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #f4f4f4;
+            background: #1a1a2e;
+            line-height: 1.6;
+            align-items: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Aligns navbar items to the center vertically */
+            padding: 1rem 2rem;
+            background: #16213e;
+            width: 100%; /* Makes navbar full width */
+            box-sizing: border-box;
+            position: fixed; /* Fixes navbar at the top of the page */
+            top: 0; /* Ensures it's at the top */
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Makes sure navbar stays on top */
+            height: 80px; /* Adjusts the height of the navbar */
+        }
+
+        /* To avoid content overlap with the fixed navbar, add padding to the body or the next section */
+        body {
+            padding-top: 80px; /* Creates space for the fixed navbar */
+        }
+
+        /* Navbar menu */
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            height: 10px;
+        }
+
+        /* Navbar links */
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #e94560; /* Highlight color on hover */
+            transform: scale(1.1); /* Zoom in effect */
+        }
+
+        .nav-menu a.active {
+            color: #c0c0c0;
+        }
+
+        .navbar .logo {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to bottom, #0f3460, #1a1a2e);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Aligns content at the top */
+            text-align: center;
+            padding: 1.5rem; /* Adjust this padding to move content up */
+            position: relative;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: #e94560;
+        }
+
+        p {
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .cta {
+            margin-top: 1.5rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #e94560;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: transform 0.3s ease, background 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: #f3727a;
+            transform: scale(1.05); /* Zoom effect for button */
+        }
+
+        .btn-alt {
+            background: #16213e;
+            color: #e94560;
+            margin-left: 10px;
+            border: 2px solid #e94560;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .btn-alt:hover {
+            background: #e94560;
+            color: #fff;
+            transform: scale(1.05); /* Zoom effect for button */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #16213e;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                height: 80vh;
+                padding: 1rem;
+            }
+
+            .hero-content {
+                width: 100%;
+                padding: 0 1rem;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .cta {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero {
+                height: 70vh;
+            }
+
+            .cta {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+  <header class="hero">
+    <div>
+        <div class="navbar">
+        <ul class="nav-menu">
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="biodata.html">Biodata</a></li>
+        </ul>
+        </div>
+      
+      <br>
+      <br>
+      <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight">Anush</span></h1>
+        <p>Welcome to my personal portfolio! Explore my professional journey, skills, and personal details.</p>
+    </div>
+  </header>
+  <footer>
+    <p>&copy; 2024 Anush. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
