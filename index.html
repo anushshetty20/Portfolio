@@ -1,224 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anush's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            color: #f4f4f4;
-            background: #1a1a2e;
-            line-height: 1.6;
-            align-items: center;
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center; /* Aligns navbar items to the center vertically */
-            padding: 1rem 2rem;
-            background: #16213e;
-            width: 100%; /* Makes navbar full width */
-            box-sizing: border-box;
-            position: fixed; /* Fixes navbar at the top of the page */
-            top: 0; /* Ensures it's at the top */
-            left: 0;
-            right: 0;
-            z-index: 1000; /* Makes sure navbar stays on top */
-            height: 80px; /* Adjusts the height of the navbar */
-        }
-
-        /* To avoid content overlap with the fixed navbar, add padding to the body or the next section */
-        body {
-            padding-top: 80px; /* Creates space for the fixed navbar */
-        }
-
-        /* Navbar menu */
-        .nav-menu {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-            height: 10px;
-        }
-
-        /* Navbar links */
-        .nav-menu a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            padding: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-menu a:hover {
-            color: #e94560; /* Highlight color on hover */
-            transform: scale(1.1); /* Zoom in effect */
-        }
-
-        .nav-menu a.active {
-            color: #c0c0c0;
-        }
-
-        .navbar .logo {
-            font-size: 1.8rem;
-            color: #fff;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(to bottom, #0f3460, #1a1a2e);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Aligns content at the top */
-            text-align: center;
-            padding: 1.5rem; /* Adjust this padding to move content up */
-            position: relative;
-        }
-
-        .hero-content {
-            width: 100%;
-            max-width: 1200px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .highlight {
-            color: #e94560;
-        }
-
-        p {
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
-        }
-
-        .cta {
-            margin-top: 1.5rem;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #e94560;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 700;
-            transition: transform 0.3s ease, background 0.3s ease;
-            text-transform: uppercase;
-        }
-
-        .btn:hover {
-            background: #f3727a;
-            transform: scale(1.05); /* Zoom effect for button */
-        }
-
-        .btn-alt {
-            background: #16213e;
-            color: #e94560;
-            margin-left: 10px;
-            border: 2px solid #e94560;
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        .btn-alt:hover {
-            background: #e94560;
-            color: #fff;
-            transform: scale(1.05); /* Zoom effect for button */
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #16213e;
-            color: #fff;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                height: 80vh;
-                padding: 1rem;
-            }
-
-            .hero-content {
-                width: 100%;
-                padding: 0 1rem;
-            }
-
-            .profile-photo {
-                width: 120px;
-                height: 120px;
-            }
-
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .cta {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero {
-                height: 70vh;
-            }
-
-            .cta {
-                margin-top: 1rem;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-  <header class="hero">
-    <div>
-        <div class="navbar">
-        <ul class="nav-menu">
-          <li><a href="index.html" >Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="biodata.html">Biodata</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav id="desktop-nav">
+        <div class="logo">Developer</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      
-      <br>
-      <br>
-      <div class="hero-content">
-        <h1>Hi, I'm <span class="highlight">Anush</span></h1>
-        <p>Welcome to my personal portfolio! Explore my professional journey, skills, and personal details.</p>
-    </div>
-  </header>
-  <footer>
-    <p>&copy; 2024 Anush. All Rights Reserved.</p>
-  </footer>
+    </nav>
+    <!-- hamburger menu -->
+    <nav id="hamburger-nav">
+        <div class="logo">Anush Shetty</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#project" onclick="toggleMenu()">Project</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile -->
+    <section class="profile">
+        <div class="profile-pic">
+            <img class="pic" src="/Portfolio/Assets/pic5.png" alt="Profile Pic">
+        </div>
+        <div class="profile-text-container">
+            <p class="profile-text">Hello, I'm</p>
+            <h1 id="animated-name">
+                <span>A</span><span>n</span><span>u</span><span>s</span><span>h</span> <span>S</span><span>h</span><span>e</span><span>t</span><span>t</span><span>y</span>    
+              </h1>
+            <p class="text">Computer Science and Engineering Professional</p>
+            <div class="btn-container">
+                <button class="btn">Download CV</button>
+                <button class="btn">Contact Info</button>
+            </div>
+            <div class="icon-container">
+                <a><i class="fa-brands fa-github"></i></a>
+                <a><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="about-head">
+            <p class="text">Get To Know More</p>
+            <h1 class="title">About Me</h1>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="/Portfolio/Assets/pic5.png" alt="About Pic" class="pic2">
+            </div>
+            <div class="about-text-container">
+                <div class="about-edu">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>Education</h2>
+                    <p class="text">B.E in Computer Science and Engineering</p>
+                </div>
+                <div class="about-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt reprehenderit, vitae iure quam dicta obcaecati molestiae? Architecto cum nesciunt, provident enim eos, autem facilis quia itaque totam dolores eaque amet assumenda. Perspiciatis?
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <!-- <section id="skill">
+        <div class="skill-intro">
+            <h2>Get Know More About My Skills </h2>
+        </div>
+        <div class="skill-container">
+            <div class="set1">
+                <p class="skillname">HTML</p>
+                <p class="skilllevel">Intermediate</p>
+            </div>
+            <div class="set1">
+                <p class="skillname">CSS</p>
+                <p class="skilllevel">Intermediate</p>
+            </div>
+            <div class="set1">
+                <p class="skillname">JAVA</p>
+                <p class="skilllevel">Experience</p>
+            </div>
+            <div class="set1">
+                <p class="skillname">MONGO DB</p>
+                <p class="skilllevel">Intermediate</p>
+            </div>
+        </div>
+    </section> -->
+    
+    <!-- Project -->
+    <section id="project">
+        <div class="project-container">
+            <div class="project-head">
+                <p class="text">Browse My Recent</p>
+                <h1 class="title">Projects</h1>
+            </div>
+            <div class="project-details-container">
+                <div class="project-box">
+                    <div class="project-img">
+                        <img src="/Portfolio/Assets/pic2.png" alt="Project 1" class="pic1">
+                    </div>
+                    <h2 class="image-title">Project One</h2>
+                    <div class="project-btn">
+                        <button class="btn">Github</button>
+                        <button class="btn">Live Demo</button>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-img">
+                        <img src="/Portfolio/Assets/pic2.png" alt="Project 2" class="pic1">
+                    </div>
+                    <h2 class="image-title">Project Two</h2>
+                    <div class="project-btn">
+                        <button class="btn">Github</button>
+                        <button class="btn">Live Demo</button>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-img">
+                        <img src="/Portfolio/Assets/pic3.png" alt="Project 3" class="pic1">
+                    </div>
+                    <h2 class="image-title">Project Three</h2>
+                    <div class="project-btn">
+                        <button class="btn">Github</button>
+                        <button class="btn">Live Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="contact-info">
+            <div class="contact-head">
+                <p class="text">Get in Touch</p>
+                <h1 class="title">Contact Me</h1>
+            </div>
+            <div class="contact-box">
+                <div><i class="fas fa-envelope"></i> anushshetty2004@gmail.com</div>
+                <div><i class="fa-brands fa-linkedin"></i> linkedin</div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <p class="copy">
+                Copyright &copy; 2025 Anush Shetty.All Rights Reserved
+            </p>
+        </footer>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
